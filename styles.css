@@ -183,6 +183,20 @@ button {
   top: 0;
 }
 
+/* style for blog section  */
+.blogs-title{
+  text-align: center;
+  color: white;
+}
+
+.blog-container{
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
