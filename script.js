@@ -112,7 +112,9 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = count;
+    countdownOverlay.innerHTML = `
+    <h1>${count}</h1>
+    `;
 
     // finished timer
     if (count == 0) {
