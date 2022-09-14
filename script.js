@@ -72,7 +72,7 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = parseInt((finishTime - startTime) / 1000);
-  const typingSpeed = Math.round(((characterTyped / 5) / timeTaken) * 60);
+  const typingSpeed = Math.round((characterTyped / 5) / timeTaken * 60);
 
   // show result modal
   resultModal.innerHTML = "";
