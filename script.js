@@ -96,6 +96,7 @@ const gameOver = () => {
   startTime = null;
   errorCount = 0;
   userText = "";
+  characterTyped = 0;
   display.classList.add("inactive");
 };
 
