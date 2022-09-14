@@ -264,7 +264,7 @@ button {
     }
 }
 
-@media only screen and (max-width: 476px) {
+@media only screen and (max-width: 576px) {
   #histories {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
