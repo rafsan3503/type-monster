@@ -14,20 +14,37 @@
 
 <body>
     <h1 class="title"><img src="./logo.png" /></h1>
+    <div class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="blog.html">Blog</a></li>
+    </div>
     <h2 class="blogs-title">Blog Section</h2>
 
     <div class="blog-container">
         <div>
-            <h2>First blog</h2>
+            <h2>Q: What is the difference between local storage and session storage?</h2>
+            <p class="blog-answer">The difference between localStorage and sessionStorage has to do with lifetime and scope: how long the data is saved for
+            and who the data is accessible to. Session storage is destroyed once the user closes the browser whereas, Local storage
+            stores data with no expiration date.</p>
         </div>
         <div>
-            <h2>First blog</h2>
+            <h2>Q: What is difference between local and global scope in JavaScript?</h2>
+            <p class="blog-answer">JavaScript variables have only two scopes. Global Variables − A global variable has a global scope which means it can be
+            defined anywhere in your JavaScript code. Local Variables − A local variable will be visible only within a function
+            where it is defined. Function parameters are always local to that function.</p>
         </div>
         <div>
-            <h2>First blog</h2>
+            <h2>Q: What is event loop in JavaScript?</h2>
+            <p class="blog-answer">The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the
+            Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such
+            an iteration is called a tick in the Event Loop.</p>
         </div>
         <div>
-            <h2>First blog</h2>
+            <h2>Q: How do I get undefined in JavaScript?</h2>
+            <p class="blog-answer">In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+            Any variable can be emptied, by setting the value to undefined. The type will also be undefined.
+            An empty value has nothing to do with undefined.
+            </p>
         </div>
     </div>
 
