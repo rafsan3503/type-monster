@@ -10,6 +10,8 @@ let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
+let characterTyped = 0;
+let wpm = 0;
 
 // Load and display question
 fetch("./texts.json")
@@ -44,6 +46,7 @@ const typeController = (e) => {
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
+    console.log(characterTyped++)
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
     errorCount++;
@@ -69,6 +72,7 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
+  const typingSpeed = Math.round(((characterTyped / 5) / timeTaken) * 60);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -82,11 +86,12 @@ const gameOver = () => {
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>You speed: <span class="bold">${typingSpeed}</span> WPM</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, errorCount, typingSpeed);
 
   // restart everything
   startTime = null;
